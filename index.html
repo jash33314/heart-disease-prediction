@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: Lavender;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            p {
+                color: red;
+            }
+            h1 {
+                color: blue;
+            }
+            .form-container {
+                background-color: rgb(189, 186, 182);
+                color: aliceblue;
+                padding: 20px;
+            }
+            .container{
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Heart Attack Prediction Model</h1>
+        <div class="form-container">
+            <p>
+                <i>
+                    The heart is a vital organ in the body. It plays a crucial role in pumping blood throughout the body.
+                    The heart consists of different blood vessels and has four chambers. Any disturbance in the heart's
+                    functioning can lead to serious health issues.
+                </i>
+            </p>
+        </div>
+        <div class="form-container">
+            <h1>Health Input Form</h1>
+            <form action="{{ url_for('predict') }}" method="post">
+                <br><label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required><br>
+
+                <br><label for="resting_bp_s">Resting BP (systolic):</label>
+                <input type="number" id="resting_bp_s" name="resting_bp_s" placeholder="Enter your resting BP" required><br>
+
+                <br><label for="cholesterol">Cholesterol (mg/dL):</label>
+                <input type="number" id="cholesterol" name="cholesterol" placeholder="Enter your cholesterol level" required><br>
+
+                <br><label for="max_heart_rate">Max Heart Rate (bpm):</label>
+                <input type="number" id="max_heart_rate" name="max_heart_rate" placeholder="Enter your max heart rate" required><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
